@@ -11,8 +11,8 @@ export const RecipeItems = ({ recipes, onClick }) => {
       justify="center"
       alignItems="center"
     >
-      {recipes.map((recipe) => (
-        <RecipeItem key={recipe.id} recipe={recipe} onClick={onClick} />
+      {recipes.map(({ recipe }) => (
+        <RecipeItem key={recipe.label} recipe={recipe} onClick={onClick} />
       ))}
     </Flex>
   );
